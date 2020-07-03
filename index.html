@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>PrepHQ Grader</title>
+
+    <!-- Boostrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- JQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+    <!-- JQuery Validate -->
+    <script src = 'https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js'></script>
+
+    <!-- My JS Script -->
+    <script type="text/javascript" src='/static/app.js'></script>
+
+</head>
+<body>
+
+<div class="info">
+  <h1>PrepHQ Grader</h1>
+  <span>
+    <p>Tell us if you improved!</p>
+  </span>
+</div>
+
+
+<form class="steps" accept-charset="UTF-8" enctype="multipart/form-data" id="myForm">
+  <ul id="progressbar">
+    <li class="active">Questions Correct</li>
+    <li>ACT/SAT Score</li>
+  </ul>
+
+
+  <div class = 'error1'style="display: none;" id='fieldsFilled'>
+      <p> Fill All Fields </p>
+  </div>
+
+  <!-- Page 1 -->
+  <fieldset>
+    <h2 class="fs-title">Questions Correct</h2>
+    <h3 class="fs-subtitle">How many questions did you get right?</h3>
+    <!-- Begin Test/Section Field -->
+        <p id = 'fieldError'> Please fill out all fields </p>
+        <div class="hs_firstname field hs-form-field">
+
+          <label for="section">What section did you take? *</label>
+
+        <div>
+
+            <select class="add__type" name="test" type="text" id ='testSelect'>
+                <option value="ACT 1" selected>ACT Test 1</option>
+                <option value="ACT 2">ACT Test 2</option>
+                <option value="SAT 1">SAT Test 1</option>
+                <option value="SAT 2">SAT Test 2</option>
+            </select>
+
+            <select class="add__type" name="section" id='sectionSelect'>
+                <option value="english" selected>ENGLISH</option>
+                <option value="science">SCIENCE</option>
+                <option value="math">MATH</option>
+                <option value="reading">READING</option>
+                <option value="writing">WRITING</option>
+            </select>
+        </div>
+
+          <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+        </div>
+    <!-- End Test/Section Field -->
+
+    <!-- Begin First Name Field -->
+        <div class="">
+
+          <label for="firstname">What's your first name? *</label>
+
+          <input id="firstname" type="text" value="" placeholder="" required>
+          <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+        </div>
+    <!-- End First Name Field -->
+
+       <!-- Begin Last Name Field -->
+        <div>
+
+          <label for="lastName">What's your last name? *</label>
+
+          <input id="lastName" type="text" value="" placeholder="" data-msg-required="Please include your last name" required>
+          <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+        </div>
+     <!-- End Last Name Field -->
+
+    <!-- Begin Questions Correct Field -->
+
+      <p id = 'scoreError'> Are you sure thats right? </p>
+        <div>
+
+          <label for="numCorrect">How many questions did you get right? *</label>
+
+          <input id="numCorrect" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number" required>
+        </div>
+
+
+
+
+    <!-- End Questions Correct Field -->
+    <input type="button" data-page="1" name="getScore" class="next action-button" value="Get Score" id='getScore' />
+
+
+
+  </fieldset>
+
+
+
+
+  <!-- Page 2 -->
+  <fieldset>
+    <h2 class="fs-title" id='testTitle'>ACT Score</h2>
+    <h3 class="fs-subtitle" id='conversionMessage'>This is your converted score</h3>
+
+      <div class="player-current-box">
+          <div class="player-current-score" id="scoreConversion">35</div>
+      </div>
+  </fieldset>
+
+
+<!-- JS, Popper.js, and jQuery for Boostrap -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
