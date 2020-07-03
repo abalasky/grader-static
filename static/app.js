@@ -2,7 +2,7 @@
 //Endpoint for GCP function
 // const endpoint = "https://us-central1-prephqconnect.cloudfunctions.net/graderPOST"
 
-const endpoint = "http://localhost:5000/gradersubmit"
+const endpoint = "https://prephq-grader.herokuapp.com/gradersubmit"
 
 document.addEventListener('DOMContentLoaded', function() {
     var current_fs, next_fs, previous_fs;
