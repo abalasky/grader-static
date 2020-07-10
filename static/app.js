@@ -1,6 +1,4 @@
 
-//Endpoint for GCP function
-// const endpoint = "https://us-central1-prephqconnect.cloudfunctions.net/graderPOST"
 
 const endpoint = "https://prephq-grader.herokuapp.com/gradersubmit"
 
