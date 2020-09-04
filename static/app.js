@@ -29,9 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-        firstName = firstName.trim();
-        lastName = lastName.trim();
-
         //Data to be sent
         const data = {
             'firstName':firstName,
