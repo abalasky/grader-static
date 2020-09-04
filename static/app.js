@@ -22,12 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const testName = test.substring(0,3);
         const testNum = test.substring(4);
         const section = document.querySelector('#sectionSelect').value;
-        const firstName = document.querySelector('#firstname').value;
-        const lastName = document.querySelector('#lastName').value;
+        //Strip whitespace from first and last name
+        const firstName = document.querySelector('#firstname').value.trim();
+        const lastName = document.querySelector('#lastName').value.trim();
         const numCorrect = document.querySelector('#numCorrect').value;
 
 
-        //Strip whitespace from first and last name
+
         firstName = firstName.trim();
         lastName = lastName.trim();
 
