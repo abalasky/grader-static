@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const numCorrect = document.querySelector('#numCorrect').value;
 
 
+        //Strip whitespace from first and last name
+        firstName = firstName.trim();
+        lastName = lastName.trim();
+
         //Data to be sent
         const data = {
             'firstName':firstName,
